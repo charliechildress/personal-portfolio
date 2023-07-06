@@ -30,6 +30,12 @@ module.exports = {
         DEFAULT: '0 2px 4px var(--tw-shadow-color)',
         lg: '0 8px 16px var(--tw-shadow-color)',
       },
+      colors: {
+        'neon-red': '#DC143C',
+        'neon-blue': '#00FFFF',
+        'dark-bg': '#000000',
+        'dark-text': '#F5F5F5',
+      },
     },
   },
   plugins: [
