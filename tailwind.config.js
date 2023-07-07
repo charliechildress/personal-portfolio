@@ -26,9 +26,7 @@ module.exports = {
         neon: 'Neon',
       },
       textShadow: {
-        sm: '0 1px 2px var(--tw-shadow-color)',
-        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
-        lg: '0 8px 16px var(--tw-shadow-color)',
+        neon: '4.5px 6px 16px #FF3131',
       },
       colors: {
         'neon-red': '#DC143C',

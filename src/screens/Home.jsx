@@ -39,4 +39,4 @@ const Home = () => {
   );
 };
 
-export default SectionWrapper(Home, 'home');
+export default Home;
