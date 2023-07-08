@@ -1,7 +1,7 @@
 import { Tilt } from 'react-tilt';
 import profile from '..//constants/profile.jpeg';
 
-const AboutTilt = () => {
+const AboutCard = () => {
   return (
     <Tilt
       options={{
@@ -15,11 +15,11 @@ const AboutTilt = () => {
         <img
           src={profile}
           alt='profile photo'
-          className='rounded-full object-contain md:h-60 sm:h-40'
+          className='rounded-full object-contain md:h-60 sm:h-60'
         ></img>
       </div>
     </Tilt>
   );
 };
 
-export default AboutTilt;
+export default AboutCard;

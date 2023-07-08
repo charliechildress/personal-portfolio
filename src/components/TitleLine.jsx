@@ -20,7 +20,7 @@ const TitleLine = () => {
     <motion.svg
       initial='hidden'
       animate='visible'
-      className='w-full pt-[20px] pr-40 sm:pr-10'
+      className='w-full pt-[5px] pr-40 sm:pr-10'
     >
       <motion.line
         x1='0'

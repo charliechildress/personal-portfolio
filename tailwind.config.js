@@ -24,15 +24,33 @@ module.exports = {
       },
       fontFamily: {
         neon: 'Neon',
+        alegreya: 'Alegreya',
+        'alegreya-italic': 'Alegreya-Italic',
       },
       textShadow: {
         neon: '4.5px 6px 16px #FF3131',
+        neon2: '16px 12px 32px #FF3131',
       },
       colors: {
         'neon-red': '#DC143C',
         'neon-blue': '#00FFFF',
         'dark-bg': '#000000',
         'dark-text': '#F5F5F5',
+      },
+      keyframes: {
+        flicker: {
+          '0%, 25%, 50%, 75%, 100%': {
+            textShadow: '4.5px 6px 16px #FF3131',
+            opacity: '1',
+          },
+          '12.5%, 37.5%, 62.5%, 87.5%': {
+            textShadow: '-4px 12px 32px #FF3131',
+            opacity: '0.7',
+          },
+        },
+      },
+      animation: {
+        flicker: 'flicker 3.75s infinite',
       },
     },
   },
