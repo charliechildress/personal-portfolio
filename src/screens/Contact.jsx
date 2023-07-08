@@ -1,5 +1,5 @@
-import { SectionWrapper } from '../wrapper';
 import TitleLine from '../components/TitleLine';
+import { SectionWrapper } from '../wrapper';
 
 const Contact = () => {
   return (

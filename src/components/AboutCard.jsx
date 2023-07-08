@@ -1,4 +1,6 @@
 import { Tilt } from 'react-tilt';
+import { motion } from 'framer-motion';
+
 import profile from '..//constants/profile.jpeg';
 
 const AboutCard = () => {
@@ -11,13 +13,19 @@ const AboutCard = () => {
       }}
       className='w-full flex justify-center'
     >
-      <div className='rounded-full flex justify-evenly items-center flex-col mt-[-60px] sm:pt-5'>
-        <img
-          src={profile}
-          alt='profile photo'
-          className='rounded-full object-contain md:h-60 sm:h-60'
-        ></img>
-      </div>
+      <motion.div
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: true }}
+      >
+        <div className='rounded-full flex justify-evenly items-center flex-col mt-[-60px] sm:pt-5'>
+          <img
+            src={profile}
+            alt='profile'
+            className='rounded-full object-contain md:h-60 sm:h-60'
+          ></img>
+        </div>
+      </motion.div>
     </Tilt>
   );
 };

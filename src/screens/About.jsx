@@ -1,10 +1,11 @@
-import { SectionWrapper } from '../wrapper';
 import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 
 import { introduction, typeWords } from '../constants';
 import AboutCard from '../components/AboutCard';
 import TitleLine from '../components/TitleLine';
+import { slideInLeft, slideInRight, textVariant } from '../animations';
+import { SectionWrapper } from '../wrapper';
 
 const About = () => {
   const [letter, setLetter] = useState(0);
@@ -25,39 +26,42 @@ const About = () => {
           setReverse(false);
         }
       }
-    }, 100);
+    }, 150);
     return () => clearInterval(interval);
   }, [letter, word, reverse]);
-
   let typedText = typeWords[word].substring(0, letter);
 
   return (
-    <motion.div>
+    <motion.div
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+    >
       <section className='flex flex-col relative h-full w-full'>
-        <div className='flex-none w-full'>
+        <motion.div variants={textVariant} className='flex-none w-full'>
           <h1 className='pt-60 font-neon text-neon-red text-shadow-neon hover:animate-flicker sm:text-5xl md:text-6xl text-9xl tracking-tight'>
             About
           </h1>
+        </motion.div>
+        <TitleLine></TitleLine>
 
-          <TitleLine></TitleLine>
-        </div>
-        <div className='flex-0 flex sm:flex-col relative w-full pt-5 sm:pr-10'>
-          <div className='flex-0 w-1/2 sm:w-full'>
+        <div className='flex-0 flex sm:flex-col relative w-full xl:pt-5 2xl:pt-5 sm:pr-10'>
+          <motion.div variants={slideInLeft} className='flex-0 w-1/2 sm:w-full'>
             <div className='flex-row'>
-              <h2
-                id='typewrite'
-                className='flex-0 mt-[-75px] italic font-semibold text-dark-text text-6xl md:text-4xl sm:text-2xl'
-              >
+              <h2 className='flex-0 mt-[-75px] 2xl:min-h-[60px] xl:min-h-[48px] lg:min-h-[40px] md:min-h-[32px] sm:min-h-[36px] italic font-semibold text-dark-text text-6xl xl:text-5xl lg:text-4xl md:text-2xl sm:text-3xl'>
                 {typedText}
               </h2>
-              <p className='flex-1 mt-10 font-medium sm:mt-5 text-dark-text 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm sm:text-sm'>
+              <p className='flex-1 mt-10 lg:mt-5 md:mt-5 sm:mt-5 font-medium text-dark-text 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm sm:text-sm'>
                 {introduction}
               </p>
             </div>
-          </div>
-          <div className='flex-2 flex justify-center items-center w-1/2 sm:w-full sm:pt-16'>
+          </motion.div>
+          <motion.div
+            variants={slideInRight}
+            className='flex-2 flex justify-center items-center w-1/2 sm:w-full sm:pt-20'
+          >
             <AboutCard></AboutCard>
-          </div>
+          </motion.div>
         </div>
       </section>
     </motion.div>
