@@ -4,6 +4,7 @@ const drawLine = {
     const delay = 0.5;
     return {
       pathLength: 1,
+      backgroundColor: '#FF3131',
       transition: {
         pathLength: { delay, type: 'spring', duration: 2.5 },
       },

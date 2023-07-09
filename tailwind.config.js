@@ -19,8 +19,9 @@ module.exports = {
         xl: { min: '1280px', max: '1535px' },
         // => @media (min-width: 1280px and max-width: 1535px) { ... }
 
-        '2xl': { min: '1536px' },
+        '2xl': { min: '1536px', max: '1700px' },
         // => @media (min-width: 1536px) { ... }
+        '3xl': { min: '1701px' },
       },
       fontFamily: {
         neon: 'Neon',
@@ -48,9 +49,20 @@ module.exports = {
             opacity: '0.7',
           },
         },
+        lineFlicker: {
+          '0%, 25%, 50%, 75%, 100%': {
+            dropShadow: '[5px_5px_10px_rgba(255,49,49,0.7)]',
+            opacity: '1',
+          },
+          '12.5%, 37.5%, 62.5%, 87.5%': {
+            dropShadow: '[0px_0px_10px_rgba(255,49,49,0.7)]',
+            opacity: '0.7',
+          },
+        },
       },
       animation: {
         flicker: 'flicker 3.75s infinite',
+        lineFlicker: 'lineFlicker 3.75s infinite',
       },
     },
   },

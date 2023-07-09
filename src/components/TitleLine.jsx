@@ -8,7 +8,7 @@ const TitleLine = () => {
       initial='hidden'
       whileInView='visible'
       viewport={{ once: true }}
-      className='w-full pt-[5px] pr-40 sm:pr-10'
+      className='w-full pt-[5px] pr-40 sm:pr-10 hover:animate-lineFlicker'
     >
       <motion.line
         x1='0'
@@ -18,7 +18,7 @@ const TitleLine = () => {
         stroke='#DC143C'
         variants={drawLine}
         custom={2}
-        className='stroke-[3.5px] '
+        className='stroke-[3.5px] hover:animate-lineFlicker'
       />
     </motion.svg>
   );

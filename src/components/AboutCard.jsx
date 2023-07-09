@@ -22,7 +22,7 @@ const AboutCard = () => {
           <img
             src={profile}
             alt='profile'
-            className='rounded-full object-contain md:h-60 sm:h-60'
+            className='rounded-full object-contain lg:h-[350px] md:h-[300px] sm:h-60'
           ></img>
         </div>
       </motion.div>
