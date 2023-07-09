@@ -1,5 +1,4 @@
 import HomeButton from '../components/HomeButton';
-import { SectionWrapper } from '../wrapper';
 
 const Home = () => {
   return (
@@ -14,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default SectionWrapper(Home, 'home');
+export default Home;

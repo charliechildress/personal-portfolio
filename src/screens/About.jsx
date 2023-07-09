@@ -37,7 +37,7 @@ const About = () => {
       whileInView='visible'
       viewport={{ once: true }}
     >
-      <section className='flex flex-col relative h-full w-full'>
+      <section className='flex flex-col relative'>
         <motion.div variants={textVariant} className='flex-none w-full'>
           <h1 className='pt-60 font-neon text-neon-red text-shadow-neon hover:animate-flicker sm:text-5xl md:text-6xl text-9xl tracking-tight'>
             About
@@ -48,10 +48,10 @@ const About = () => {
         <div className='flex-0 flex sm:flex-col relative w-full xl:pt-5 2xl:pt-5 sm:pr-10'>
           <motion.div variants={slideInLeft} className='flex-0 w-1/2 sm:w-full'>
             <div className='flex-row'>
-              <h2 className='flex-0 mt-[-75px] 2xl:min-h-[60px] xl:min-h-[48px] lg:min-h-[40px] md:min-h-[32px] sm:min-h-[36px] italic font-semibold text-dark-text text-6xl xl:text-5xl lg:text-4xl md:text-2xl sm:text-3xl'>
+              <h2 className='flex-0 mt-[-90px] 2xl:min-h-[60px] xl:min-h-[48px] lg:min-h-[40px] md:min-h-[32px] sm:min-h-[36px] italic font-semibold text-dark-text text-2xl 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-2xl sm:text-3xl'>
                 {typedText}
               </h2>
-              <p className='flex-1 mt-10 lg:mt-5 md:mt-5 sm:mt-5 font-medium text-dark-text 2xl:text-3xl xl:text-2xl lg:text-xl md:text-sm sm:text-sm'>
+              <p className='flex-1 mt-10 lg:mt-5 md:mt-5 sm:mt-5 font-medium text-dark-text text-sm 2xl:text-xl xl:text-xl lg:text-lg md:text-sm sm:text-sm'>
                 {introduction}
               </p>
             </div>
