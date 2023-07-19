@@ -1,7 +1,7 @@
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 
-import profile from '..//constants/profile.jpeg';
+import profile from '../constants/profile.jpeg';
 
 const AboutCard = () => {
   return (
