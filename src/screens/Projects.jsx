@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import TitleLine from '../components/TitleLine';
 import { textVariant, slideInRight, slideInLeft } from '../animations';
 import { SectionWrapper } from '../wrapper';
+import ProjectsCard from '../components/ProjectsCard';
 
 import VideoDemo from '../components/VideoDemo';
 
@@ -17,7 +18,7 @@ const Projects = () => {
         <motion.div variants={textVariant} className='flex-none w-full'>
           <motion.div
             variants={textVariant}
-            className='pt-[180px] font-neon text-neon-red text-shadow-neon hover:animate-flicker sm:text-5xl md:text-6xl lg:text-8xl text-9xl tracking-tight'
+            className='pt-[180px] font-neon text-neon-red text-shadow-neon hover:animate-flicker xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-9xl tracking-tight'
           >
             <h1>Projects</h1>
             <TitleLine />
