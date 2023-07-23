@@ -8,7 +8,7 @@ const VideoDemo = () => {
       whileInView='visible'
       viewport={{ once: true }}
     >
-      <div className='flex justify-evenly items-center flex-col mt-[-60px] sm:pt-5'>
+      <div className='w-1/2'>
         <div>
           <video autoPlay loop muted>
             <source src={macbook} type='video/mp4' />

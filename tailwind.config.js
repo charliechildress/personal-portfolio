@@ -38,6 +38,7 @@ module.exports = {
         'neon-blue': '#00FFFF',
         'dark-bg': '#000000',
         'dark-text': '#F5F5F5',
+        'card-text': '#FFFFFF',
       },
       keyframes: {
         flicker: {
