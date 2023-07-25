@@ -6,8 +6,8 @@ const typeWords = ['Hello, World!', 'Welcome to my website!'];
 
 const projects = [
 	{
-		projectName: "GreenBox App",
-		organization: "GreenBox",
+		projectName: "GreenBox Delivery App",
+		organization: "GreenBox Storage",
 		information:
 			"User friendly app that allows for the management and logging of inventory for thousands of storage dropoffs and pickups across dozens of locations.",
 		languages: ["HTML", "CSS", "JavaScript", "React Native"],
@@ -18,14 +18,14 @@ const projects = [
 		projectName: "Charliechildress.me",
 		organization: "Independent",
 		information:
-			"Personal website to applying my skills in web devlopment and UI/UX design. Welcome!",
+			"Personal website to applying my skills in web development and UI/UX design. Hope you enjoy it!",
 		languages: ["HTML", "CSS", "JavaScript", "React"],
 		code: " ",
 		link: " ",
 	},
 	{
 		projectName: "GreenBox Dashboard",
-		organization: "GreenBox",
+		organization: "GreenBox Storage",
 		information:
 			"Dashboard that provides real-time insights and centralized control for order management, customer data, and key administrative tasks.",
 		languages: ["HTML", "CSS", "TypeScript", "React"],
