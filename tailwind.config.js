@@ -39,7 +39,7 @@ module.exports = {
         'dark-bg': '#000000',
         'dark-text': '#F5F5F5',
         'card-text': '#FFFFFF',
-        'card-bg': 'hsl(249,55%,56%)',
+        'card-bg': '#6A5ACD',
         'card-border': '#6699FF',
       },
       keyframes: {

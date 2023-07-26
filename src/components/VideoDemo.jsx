@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import macbook from '../constants/macbook.mp4';
+import macbook from '../constants/macbook.gif';
 
 const VideoDemo = () => {
   return (
@@ -10,10 +10,7 @@ const VideoDemo = () => {
     >
       <div>
         <div>
-          <video autoPlay loop muted>
-            <source src={macbook} type='video/mp4' />
-            Your browser does not support the video tag.
-          </video>
+          <img src={macbook} alt='video/gif' />
         </div>
       </div>
     </motion.div>

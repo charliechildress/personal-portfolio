@@ -66,7 +66,7 @@ const ProjectCards = () => {
                   </a>
                 </div>
               </div>
-              <div className='flex-1 scale-[0.80] '>
+              <div className='flex-1 scale-[0.8] '>
                 <VideoDemo />
               </div>
             </div>
