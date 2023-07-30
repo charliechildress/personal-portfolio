@@ -23,7 +23,7 @@ const slideInLeft = {
       opacity: 100,
       transition: {
         type: 'tween',
-        delay: 0.4,
+        delay: 0.5,
         duration: 1,
         ease: 'easeOut',
       },
@@ -43,7 +43,7 @@ const slideInRight = {
       opacity: 100,
       transition: {
         type: 'tween',
-        delay: 0.4,
+        delay: 0.5,
         duration: 1,
         ease: 'easeOut',
       },
@@ -63,7 +63,7 @@ const textVariant = {
       transition: {
         type: 'spring',
         duration: 2,
-        delay: 0.1,
+        delay: 0.5,
       },
     };
   },

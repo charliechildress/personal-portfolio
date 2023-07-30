@@ -28,10 +28,16 @@ code {
     monospace;
 }
 
+.icon-container svg {
+  font-size: 75px;
+  border-radius: 10px;
+ 
+}
+
 .icon{
     align-self: center;
 }
 
 .icon:hover{
-  color:#DC143C
+  color:#DC143C;
 }
