@@ -4,14 +4,17 @@ import Navbar from './components/Navbar';
 import { useInView } from 'react-intersection-observer';
 
 const App = () => {
-  const options = {
-    threshold: 0.15,
-  };
+  const aboutOptions = {
+		threshold: 0.5,
+	};
+	const options = {
+		threshold: 0.05,
+	};
 
-  const [aboutInView, aboutView] = useInView({ threshold: 0.5 });
-  const [projectInView, projectView] = useInView(options);
-  const [skillsInView, skillsView] = useInView(options);
-  const [contactInView, contactView] = useInView(options);
+	const [aboutInView, aboutView] = useInView(aboutOptions);
+	const [projectInView, projectView] = useInView(options);
+	const [skillsInView, skillsView] = useInView(options);
+	const [contactInView, contactView] = useInView(options);
 
   const active = () => {
     if (aboutView) {

@@ -62,61 +62,71 @@ const projects = [
 ];
 
 const skills = [
-  {
-    name: 'Java',
-    rating: '5',
-    years: '2 years',
-  },
-  {
-    name: 'JavaScript',
-    rating: '4',
-    years: '<1 year',
-  },
-  {
-    name: 'React',
-    rating: '4',
-    years: '<1 year',
-  },
-  {
-    name: 'React Native',
-    rating: '4',
-    years: '<1 year',
-  },
-  {
-    name: 'Python',
-    rating: '4',
-    years: '3 years',
-  },
-  {
-    name: 'HTML',
-    rating: '4',
-    years: '<1 year',
-  },
-  {
-    name: 'CSS',
-    rating: '4',
-    years: '<1 year',
-  },
-  {
-    name: 'C',
-    rating: '3',
-    years: '1 year',
-  },
-  {
-    name: 'TypeScript',
-    rating: '3',
-    years: '<1 year',
-  },
-  {
-    name: 'Bash',
-    rating: '3',
-    years: '1 year',
-  },
-  {
-    name: 'JSON',
-    rating: '3',
-    years: '2 years',
-  },
+	{
+		name: "Java",
+		rating: "5",
+		years: "2 years",
+		icon: "fab fa-java javaIcon",
+	},
+	{
+		name: "JavaScript",
+		rating: "4",
+		years: "<1 year",
+		icon: "fab fa-js-square jsIcon",
+	},
+	{
+		name: "React",
+		rating: "4",
+		years: "<1 year",
+		icon: "fab fa-react reactIcon",
+	},
+	{
+		name: "React Native",
+		rating: "4",
+		years: "<1 year",
+		icon: "fab fa-react rnIcon",
+	},
+	{
+		name: "Python",
+		rating: "4",
+		years: "3 years",
+		icon: "fab fa-python pythonIcon",
+	},
+	{
+		name: "HTML",
+		rating: "4",
+		years: "<1 year",
+		icon: "fab fa-html5 htmlIcon",
+	},
+	{
+		name: "CSS",
+		rating: "4",
+		years: "<1 year",
+		icon: "fab fa-css3-alt",
+	},
+	{
+		name: "C",
+		rating: "3",
+		years: "1 year",
+		icon: "fas fa-copyright cIcon",
+	},
+	{
+		name: "TypeScript",
+		rating: "3",
+		years: "<1 year",
+	},
+	{
+		name: "Bash",
+		rating: "3",
+		years: "1 year",
+		icon: "fas fa-terminal",
+	},
+	{
+		name: "JSON",
+		rating: "3",
+		years: "2 years",
+		icon: "fas fa-file",
+	},
 ];
 
 const tools = [
