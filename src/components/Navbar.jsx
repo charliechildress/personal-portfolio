@@ -12,7 +12,7 @@ const theme = createTheme({
 					display: "flex",
 					flexDirection: "column",
 					flexWrap: "nowrap",
-					backgroundColor: "#DC143C",
+					backgroundColor: "#00ccff",
 					overflow: "hidden",
 				},
 			},
@@ -34,7 +34,7 @@ export default function PermanentDrawerLeft({ active }) {
 				variant="permanent"
 				anchor="top"
 			>
-				<div className="flex flex-row m-5 text-white text-xl font-bold ">
+				<div className="flex flex-row m-5 text-white text-xl font-bold">
 					<a href="#top" className="hover:animate-flicker">
 						<p className="font-neon text-2xl font-normal text-shadow-header">
 							Charlie Childress

@@ -30,28 +30,28 @@ module.exports = {
 				"alegreya-italic": "Alegreya-Italic",
 			},
 			textShadow: {
-				neon: "4.5px 6px 16px #FF3131",
-				neon2: "16px 12px 32px #FF3131",
+				neon: "4.5px 6px 16px #00ccff",
+				neon2: "16px 12px 32px #00ccff ",
 				header: "4.5px 6px 16px #FFFFFF",
 			},
 			colors: {
-				"neon-red": "#DC143C",
+				"neon-text": "#00ccff",
 				"neon-blue": "#00FFFF",
 				"dark-bg": "#000000",
 				"dark-text": "#F5F5F5",
 				"card-text": "#FFFFFF",
 				"card-bg": "#6A5ACD",
 				"card-border": "#6699FF",
-				"header-select": "#FFC0CB",
+				"header-select": "#152238",
 			},
 			keyframes: {
 				flicker: {
 					"0%, 25%, 50%, 75%, 100%": {
-						textShadow: "4.5px 6px 16px #FF3131",
+						textShadow: "4.5px 6px 16px #00ccff ",
 						opacity: "1",
 					},
 					"12.5%, 37.5%, 62.5%, 87.5%": {
-						textShadow: "-4px 12px 32px #FF3131",
+						textShadow: "-4px 12px 32px #00ccff ",
 						opacity: "0.7",
 					},
 				},
