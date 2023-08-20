@@ -45,26 +45,30 @@ const ProjectCards = () => {
 										{project.code}
 									</p>
 									<div className="flex flex-row">
-										<a
-											href="https://github.com"
-											target="_blank"
-											rel="noopener noreferrer"
-											aria-label="icon"
-											className="mt-8 p-2 flex flex-row w-1/4 bg-red-500 rounded-md"
-										>
-											<GitHubIcon />
-											<p className="text-card-text pl-2">Look at code</p>
-										</a>
-										<a
-											href="https://google.com"
-											target="_blank"
-											rel="noopener noreferrer"
-											aria-label="icon"
-											className="mt-8 p-2 ml-8 flex flex-row w-1/4 bg-red-500 rounded-md"
-										>
-											<PersonalVideoIcon />
-											<p className="text-card-text pl-2">Visit site</p>
-										</a>
+									{project.hasOwnProperty("code") && (
+											<a
+												href={project.code}
+												target="_blank"
+												rel="noopener noreferrer"
+												aria-label="icon"
+												className="mt-8 p-2 flex flex-row w-1/4 bg-red-500 rounded-md"
+											>
+												<GitHubIcon />
+												<p className="text-card-text pl-2">Look at code</p>
+											</a>
+										)}
+										{project.hasOwnProperty("link") && (
+											<a
+												href={project.link}
+												target="_blank"
+												rel="noopener noreferrer"
+												aria-label="icon"
+												className="mt-8 p-2 ml-8 flex flex-row w-1/4 bg-red-500 rounded-md"
+											>
+												<PersonalVideoIcon />
+												<p className="text-card-text pl-2">Visit site</p>
+											</a>
+										)}
 									</div>
 								</div>
 								<div className="flex-1 scale-[0.8] ">
@@ -101,30 +105,33 @@ const ProjectCards = () => {
 											>
 												{language}{" "}
 											</p>
-										))}{" "}
-										{project.code}
+										))}
 									</p>
 									<div className="flex flex-row">
-										<a
-											href="https://github.com"
-											target="_blank"
-											rel="noopener noreferrer"
-											aria-label="icon"
-											className="mt-8 p-2 flex flex-row w-1/4 bg-red-500 rounded-md"
-										>
-											<GitHubIcon />
-											<p className="text-card-text pl-2">Look at code</p>
-										</a>
-										<a
-											href="https://google.com"
-											target="_blank"
-											rel="noopener noreferrer"
-											aria-label="icon"
-											className="mt-8 p-2 ml-8 flex flex-row w-1/4 bg-red-500 rounded-md"
-										>
-											<PersonalVideoIcon />
-											<p className="text-card-text pl-2">Visit site</p>
-										</a>
+										{project.hasOwnProperty("code") && (
+											<a
+												href={project.code}
+												target="_blank"
+												rel="noopener noreferrer"
+												aria-label="icon"
+												className="mt-8 p-2 flex flex-row w-1/4 bg-red-500 rounded-md"
+											>
+												<GitHubIcon />
+												<p className="text-card-text pl-2">Look at code</p>
+											</a>
+										)}
+										{project.hasOwnProperty("link") && (
+											<a
+												href={project.link}
+												target="_blank"
+												rel="noopener noreferrer"
+												aria-label="icon"
+												className="mt-8 p-2 ml-8 flex flex-row w-1/4 bg-red-500 rounded-md"
+											>
+												<PersonalVideoIcon />
+												<p className="text-card-text pl-2">Visit site</p>
+											</a>
+										)}
 									</div>
 								</div>
 								<div className="flex-1 scale-[0.8] ">
