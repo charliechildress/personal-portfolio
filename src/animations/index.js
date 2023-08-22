@@ -51,6 +51,27 @@ const slideInRight = {
   },
 };
 
+export const skillsStagger = (delay) => {
+  return {
+    hidden: {
+      opacity: 0,
+      x: -50,
+      y: -50,
+    },
+    show: {
+      opacity: 100,
+      x: 0,
+      y: 0,
+      transition: {
+        type: 'tween',
+        delay: delay,
+        duration: 0.5,
+        ease: 'easeOut',
+      },
+    },
+  };
+};
+
 const textVariant = {
   hidden: {
     y: -50,
