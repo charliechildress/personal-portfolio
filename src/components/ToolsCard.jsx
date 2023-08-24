@@ -12,20 +12,20 @@ const ToolsCard = () => {
         {[...Array(tool.rating)].map(
           (num, i) =>
             i <= tool.rating && (
-              <div className='bg-white rounded-full h-2 w-2 m-1'></div>
+              <div className='bg-white rounded-full h-2 w-2 m-1 sm:m-[2px] xs:m-[1px]'></div>
             )
         )}
         {[...Array(alt)].map(
           (num, i) =>
             i <= alt && (
-              <div className='border-white border-2 rounded-full h-2 w-2 m-1'></div>
+              <div className='border-white border-2 rounded-full h-2 w-2 m-1 sm:m-[2px] xs:m-[1px]'></div>
             )
         )}
       </span>
     );
   };
   return (
-    <div className='flex flex-row flex-wrap mt-10'>
+    <div className='flex flex-row flex-wrap mt-10 pr-[100px] sm:pr-[80px]'>
       {tools.map((tool, i) => {
         return (
           <motion.div
@@ -34,7 +34,7 @@ const ToolsCard = () => {
             whileInView='show'
             viewport={{ once: true }}
             variants={skillsStagger(i * 0.2)}
-            className='icon flex flex-col group w-1/6 bg-[#000080] border-2 rounded-lg border-white m-2 h-60 font-semibold text-white items-center'
+            className='w-1/5 sm:w-1/4'
           >
             <Tilt
               options={{
@@ -42,11 +42,17 @@ const ToolsCard = () => {
                 speed: 20,
                 scale: 1.05,
               }}
+              className='icon flex flex-col group w-100 bg-[#000080] sm:text-xs xs:text-xs border-2 rounded-lg border-white m-2 h-60 font-semibold text-white '
             >
               <p className='mt-4 mb-4 text-center'>{tool.name}</p>
               {typeof tool.icon === 'string' && (
                 <div className='flex justify-center items-center'>
-                  <i className={tool.icon} style={{ fontSize: '75px' }} />
+                  {tool.name === 'Android Studio' && (
+                    <i className={tool.icon} style={{ fontSize: '55px' }} />
+                  )}
+                  {tool.name !== 'Android Studio' && (
+                    <i className={tool.icon} style={{ fontSize: '75px' }} />
+                  )}
                 </div>
               )}
               {typeof tool.icon !== 'string' && (

@@ -12,20 +12,20 @@ const SkillsCard = () => {
         {[...Array(skill.rating)].map(
           (num, i) =>
             i <= skill.rating && (
-              <div className='bg-white rounded-full h-2 w-2 m-1'></div>
+              <div className='bg-white rounded-full h-2 w-2 m-1 sm:m-[2px] xs:m-[1px]'></div>
             )
         )}
         {[...Array(alt)].map(
           (num, i) =>
             i <= alt && (
-              <div className='border-white border-2 rounded-full h-2 w-2 m-1'></div>
+              <div className='border-white border-2 rounded-full h-2 w-2 m-1 sm:m-[2px] xs:m-[1px]'></div>
             )
         )}
       </span>
     );
   };
   return (
-    <div className='flex flex-row flex-wrap mt-10'>
+    <div className='flex flex-row flex-wrap mt-10 pr-[100px] sm:pr-[80px]'>
       {skills.map((skill, i) => {
         return (
           <motion.div
@@ -34,7 +34,7 @@ const SkillsCard = () => {
             whileInView='show'
             viewport={{ once: true }}
             variants={skillsStagger(i * 0.2)}
-            className='icon flex flex-col group w-1/6 bg-[#000080] border-2 rounded-lg border-white m-2 h-60 font-semibold text-white '
+            className='w-1/5 sm:w-1/4'
           >
             <Tilt
               options={{
@@ -42,11 +42,17 @@ const SkillsCard = () => {
                 speed: 20,
                 scale: 1.05,
               }}
+              className='icon flex flex-col group w-100 bg-[#000080] sm:text-xs xs:text-xs border-2 rounded-lg border-white m-2 h-60 font-semibold text-white '
             >
-              <p className='mt-4 mb-4 text-center'>{skill.name}</p>
+              <p className='mt-4 mb-4 text-center '>{skill.name}</p>
               {typeof skill.icon === 'string' && (
                 <div className='flex justify-center items-center'>
-                  <i className={skill.icon} style={{ fontSize: '75px' }} />
+                  {skill.name === 'Bash' && (
+                    <i className={skill.icon} style={{ fontSize: '55px' }} />
+                  )}
+                  {skill.name !== 'Bash' && (
+                    <i className={skill.icon} style={{ fontSize: '75px' }} />
+                  )}
                 </div>
               )}
               {typeof skill.icon !== 'string' && (
