@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import macbook from '../constants/macbook.gif';
-
+import macbook from '../constants/demos/greenbox-demo-website.gif';
 const VideoDemo = () => {
   return (
     <motion.div
