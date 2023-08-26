@@ -1,33 +1,124 @@
+import emailjs from "@emailjs/browser";
+
+import { useRef, useState } from "react";
+
 const ContactCard = () => {
-  return (
+	const formRef = useRef();
+	const [form, setForm] = useState({
+		firstName: "",
+		lastName: "",
+		email: "",
+		number: "",
+		message: "",
+	});
+	const [loading, setLoading] = useState(false);
+	const handleChange = (e) => {
+		const { target } = e;
+		const { name, value } = target;
+		setForm({
+			...form,
+			[name]: value,
+		});
+	};
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setLoading(true);
+		emailjs
+			.send(
+				"service_61isdpd",
+				"template_82ya5lg",
+				{
+					from_name: form.firstName + " " + form.lastName,
+					to_name: "Charlie",
+					from_email: form.email,
+					to_email: "charlie.t.childress.24@dartmouth.edu",
+					message: form.number + " " + form.message,
+				},
+				"PHog8Fmkx5rw7qubY"
+			)
+			.then(
+				() => {
+					setLoading(false);
+					alert("Message received! Thank you!");
+					setForm({
+						firstName: "",
+						lastName: "",
+						email: "",
+						number: "",
+						message: "",
+					});
+				},
+				(error) => {
+					setLoading(false);
+					console.log(error);
+					alert("Something went wrong. Use email icon instead!");
+				}
+			);
+	};
+	return (
 		<div className="flex flex-col w-full h-full pt-6 pb-10 px-8 bg-neon-text text-white shadow-[0px_0px_100px_rgba(49,49,255,0.7)]">
-			<form>
+			<form ref={formRef} onSubmit={handleSubmit}>
 				<h1 className="font-bold pb-3 text-dark-text text-sm 3xl:text-2xl 2xl:text-xl xl:text-xl lg:text-md md:text-md sm:text-sm xs:text-xs">
 					Send Me A Message!
 				</h1>
 				<div className="flex flex-row font-semibold text-lg pb-2">
-					<h2 className="w-1/2">Name</h2>
+					<h2 className="w-1/2">Name *</h2>
 				</div>
 				<div className="flex flex-row  text-black">
-					<input className="w-1/2 p-2" placeholder={"First"}></input>
-					<input className="ml-3 w-1/2 p-2 " placeholder={"Last"}></input>
+					<input
+						type="text"
+						className="w-1/2 p-2"
+						placeholder="First"
+						name="firstName"
+						value={form.firstName}
+						onChange={handleChange}
+						required
+					></input>
+					<input
+						type="text"
+						className="ml-3 w-1/2 p-2 "
+						placeholder={"Last"}
+						value={form.lastName}
+						name="lastName"
+						onChange={handleChange}
+					></input>
 				</div>
 				<div className="flex flex-row font-semibold text-lg pt-5 pb-2">
-					<h2 className="w-1/2">Email</h2>
+					<h2 className="w-1/2">Email *</h2>
 					<h2 className="w-1/2 ml-3">Phone Number</h2>
 				</div>
 				<div className="flex flex-row text-black">
-					<input className="w-1/2 p-2" placeholder={"Email"}></input>
-					<input className="ml-3 w-1/2 p-2" placeholder={"Number"}></input>
+					<input
+						type="email"
+						className="w-1/2 p-2"
+						placeholder={"Email"}
+						name="email"
+						value={form.email}
+						onChange={handleChange}
+						required
+					></input>
+					<input
+						type="number"
+						className="ml-3 w-1/2 p-2"
+						placeholder={"Number"}
+						name="number"
+						value={form.number}
+						onChange={handleChange}
+					></input>
 				</div>
-				<h2 className="w-1/2 font-semibold text-lg pt-5 pb-2">Message</h2>
+				<h2 className="w-1/2 font-semibold text-lg pt-5 pb-2">Message *</h2>
 				<input
+					type="text"
 					className="w-full pb-40 p-2 text-black"
 					placeholder={"Message"}
+					name="message"
+					value={form.message}
+					onChange={handleChange}
+					required
 				></input>
 				<div className="pt-4"></div>
 				<button className="w-full border-2 p-2 px-4 border-white hover:bg-header-select hover:border-header-select">
-					<p>Submit</p>
+					{loading ? "Sending..." : "Send"}
 				</button>
 			</form>
 		</div>

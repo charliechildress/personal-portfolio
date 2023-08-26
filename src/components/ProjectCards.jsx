@@ -6,6 +6,7 @@ import { slideInLeft, slideInRight } from "../animations";
 import { projects } from "../constants";
 import VideoDemo from "./VideoDemo";
 
+
 import GitHubIcon from "@mui/icons-material/GitHub";
 import PersonalVideoIcon from "@mui/icons-material/PersonalVideo";
 
@@ -45,7 +46,7 @@ const ProjectCards = () => {
 										{project.code}
 									</p>
 									<div className="flex flex-row">
-									{project.hasOwnProperty("code") && (
+										{project.hasOwnProperty("code") && (
 											<a
 												href={project.code}
 												target="_blank"
@@ -72,7 +73,7 @@ const ProjectCards = () => {
 									</div>
 								</div>
 								<div className="flex-1 scale-[0.8] ">
-									<VideoDemo />
+									<VideoDemo source={project.demo} />
 								</div>
 							</div>
 						</motion.div>
@@ -135,7 +136,7 @@ const ProjectCards = () => {
 									</div>
 								</div>
 								<div className="flex-1 scale-[0.8] ">
-									<VideoDemo />
+									<VideoDemo source={project.demo} />
 								</div>
 							</div>
 						</motion.div>
