@@ -1,7 +1,7 @@
 import greenboxWebsite from '../constants/demos/greenbox-demo-website.gif';
 import nuggetsDemo from '../constants/demos/nuggets-demo.gif';
 import tseDemo from '../constants/demos/tse-demo.gif';
-import greenboxApp from '../constants/demos/tse-demo.gif';
+import greenboxApp from '../constants/demos/greenbox-app-demo.gif';
 import personalWebsite from '../constants/demos/personal-website-demo.gif';
 import cse from '../constants/demos/cse-demo.gif';
 

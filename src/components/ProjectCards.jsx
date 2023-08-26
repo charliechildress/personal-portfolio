@@ -84,7 +84,10 @@ const ProjectCards = () => {
                 </div>
                 <div className='flex-1 flex justify-center transition lg:pr-8 md:pr-8 sm:pr-8 xs:pr-8 hover:-translate-y-2'>
                   <div>
-                    <VideoDemo source={project.demo} />
+                    <VideoDemo
+                      name={project.projectName}
+                      source={project.demo}
+                    />
                   </div>
                 </div>
               </div>
@@ -161,7 +164,10 @@ const ProjectCards = () => {
                 </div>
                 <div className='flex-1 flex justify-center transition lg:pr-8 md:pr-8 sm:pr-8 xs:pr-8 hover:-translate-y-2'>
                   <div>
-                    <VideoDemo source={project.demo} />
+                    <VideoDemo
+                      name={project.projectName}
+                      source={project.demo}
+                    />
                   </div>
                 </div>
               </div>
