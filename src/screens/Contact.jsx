@@ -73,8 +73,8 @@ const Contact = () => {
 						<ContactCard />
 					</motion.div>
 				</div>
-				<div className="flex justify-center items-center">
-					<p className="mt-12 mb-12 lg:mt-5 md:mt-5 sm:mt-5 xs:mt-5 font-medium text-dark-text text-sm 3xl:text-3xl 2xl:text-2xl xl:text-2xl lg:text-lg md:text-lg sm:text-sm xs:text-xs">
+				<div className="flex justify-center pr-40 lg:pr-30 md:pr-20 sm:pr-10 xs:pr-3">
+					<p className="mt-12 mb-12 lg:mt-5 md:mt-5 sm:mt-5 xs:mt-5 self-center font-medium text-dark-text text-sm 3xl:text-3xl 2xl:text-2xl xl:text-2xl lg:text-lg md:text-lg sm:text-sm xs:text-xs">
 						Copyright © 2023 by Charlie Childress. All rights reserved.
 					</p>
 				</div>
