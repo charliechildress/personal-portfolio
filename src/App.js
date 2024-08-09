@@ -1,44 +1,52 @@
-import { Home, About, Resources, Contact } from "./screens";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import { Home, About, Projects, Skills, Contact } from './screens';
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import { useInView } from 'react-intersection-observer';
+
 const App = () => {
+  const aboutOptions = {
+		threshold: 0.5,
+	};
+	const options = {
+		threshold: 0.05,
+	};
+
+	const [aboutInView, aboutView] = useInView(aboutOptions);
+	const [projectInView, projectView] = useInView(options);
+	const [skillsInView, skillsView] = useInView(options);
+	const [contactInView, contactView] = useInView(options);
+
+  const active = () => {
+    if (aboutView) {
+      return 'About';
+    } else if (projectView) {
+      return 'Projects';
+    } else if (skillsView) {
+      return 'Skills';
+    } else if (contactView) {
+      return 'Contact';
+    }
+  };
+
   return (
     <BrowserRouter>
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <div>
-              <Navbar active={"Home"}></Navbar> <Home />
-            </div>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <div>
-              <Navbar active={"About"}></Navbar> <About />
-            </div>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <div>
-              <Navbar active={"Contact"}></Navbar> <Contact />
-            </div>
-          }
-        />
-        <Route
-          path="/resources"
-          element={
-            <div>
-              <Navbar active={"Resources"}></Navbar> <Resources />
-            </div>
-          }
-        />
-      </Routes>
+      {(aboutView || projectView || skillsView || contactView) && (
+        <Navbar active={active()}></Navbar>
+      )}
+
+      <Home></Home>
+      <div ref={aboutInView}>
+        <About></About>
+      </div>
+      <div ref={projectInView}>
+        <Projects></Projects>
+      </div>
+      <div ref={skillsInView}>
+        <Skills></Skills>
+      </div>
+      <div ref={contactInView}>
+        <Contact></Contact>
+      </div>
     </BrowserRouter>
   );
 };
